@@ -8,6 +8,7 @@ import { BASE_URL } from "../utils/constants";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = async (e) => {
@@ -25,7 +26,7 @@ const Login = () => {
       dispatch(addUser(res.data.data));
       navigate("/");
     } catch (error) {
-      console.error(error);
+      setError(error?.response?.data?.message || "Something Went Wrong");
     }
   };
 
@@ -60,6 +61,7 @@ const Login = () => {
                 />
               </fieldset>
             </div>
+            <p style={{ color: "red" }}>{error}</p>
             <div className="card-actions justify-center mt-4">
               <button
                 type="submit"
