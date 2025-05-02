@@ -147,13 +147,13 @@ const ReceivedRequestCard = ({ data, onUpdate }) => {
         {" "}
         {/* Reduced padding and gap */}
         <button
-          className="px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg text-xs font-medium"
+          className="px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg text-xs font-medium  cursor-pointer"
           onClick={() => handleAccept("accepted")}
         >
           Accept
         </button>
         <button
-          className="px-3 py-1.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs font-medium"
+          className="px-3 py-1.5 bg-red-600 hover:bg-red-700 rounded-lg text-xs font-medium  cursor-pointer"
           onClick={() => handleDecline("rejected")}
         >
           Decline
