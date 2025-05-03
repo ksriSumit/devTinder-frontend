@@ -3,6 +3,7 @@ import Body from "./components/Body";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feed from "./components/Feed";
+import NotFound from "./components/NotFound";
 import { Provider } from "react-redux";
 import { appStore } from "./utils/appStore";
 import Connections from "./components/Connections";
@@ -20,6 +21,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/connections" element={<Connections />} />
               <Route path="/receivedRequest" element={<ReceivedRequest />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>
